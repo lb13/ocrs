@@ -19,21 +19,40 @@ THE ONLINE CENTRE FOR RELIGIOUS STUDIES
 </header>
 
 <nav>
+<!--Standard Menu-->
 	<ul>
 		<li><span style="color: #921515">HOME</span></li>
 		<li><a href="contact.html">CONTACT US</a></li>
-		<li><a>ONLINE COURSES</a></li>
-		<li><a>LINKS</a></li>
-		<li><a>NEWS</a></li>
-		<li><a>FREE RESOURCES</a></li>
-		<li><a>OCRS: TALKS</a></li>
+		<li><a href="courses.html">ONLINE COURSES</a></li>
+		<li><a href="links.html">LINKS</a></li>
+		<li><a href="news.html">NEWS</a></li>
+		<li><a href="resources.html">FREE RESOURCES</a></li>
+		<li><a href="talks.html">OCRS: TALKS</a></li>
 	</ul>
+
+<!--Mobile Menu-->	
+	<div id="menu" style="font-size: 40px; display: none; float: right; cursor: pointer" onclick="show('dropmenu');">&#9776;</div>
+	
+	<select id="dropmenu" style="display: none; clear: right; float: right" onchange="location = this.value;">
+	<option>-select-</option>
+	<option value="/">HOME</option>
+	<option value="contact.html">CONTACT US</option>
+	<option value="courses.html">ONLINE COURSES</option>
+	<option value="links.html">LINKS</option>
+	<option value="news.html">NEWS</option>
+	<option value="resources.html">FREE RESOURCES</option>
+	<option value="talks.html">OCRS: TALKS</option>
+	</select>
+	
 </nav>
 
 <div style="clear: both;"></div>
+
 <br>
 <hr>
 <br>
+
+<!--Main Text Area-->
 <div id="text">
 <img src="OCRS Logo.jpg" style="float: left; margin-right: 15px; width: 90px"><h2>Welcome to the Online Centre for Religious Studies. We are dedicated to the promotion and facilitation of religious education for a wide and diverse audience.</h2>
 It is increasingly important for people to be religiously literate; the reality of living in a multicultural society, where many worldviews interact, means that we need understanding and knowledge if we are to live together peacefully. We are also enriched by the millennia of shared human experience that is encoded within faiths, traditions, and worldviews, and stand to benefit by its study.
@@ -47,16 +66,31 @@ We will also provide a range of free learning resources, including information s
 The OCRS is based in Somerset, United Kingdom.
 <br><br>
 </div>
+
 <br>
 <hr>
 <br>
+
 <footer>
 <a href="https://www.facebook.com/relstudies/">Facebook</a> | <a href="https://twitter.com/@rel_studies/">Twitter</a> | <a href="https://www.youtube.com/channel/UCQSlC6QOT-Z1019OVRWiUxQ/">Youtube</a>
 <br><br>
 &copy; OCRS 2016-7
 </footer>
+
 </div>
 
 </body>
+
+<script type="text/javascript">
+
+function show(id) {
+	document.getElementById(id).style.display = 'block';
+}
+
+function hide(id) {
+	document.getElementById(id).style.display = 'none';
+}
+
+</script>
 
 </html>
