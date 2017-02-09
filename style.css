@@ -48,6 +48,19 @@ a:hover {
 	color: #921515;
 }
 
+h3 {
+	margin: 0px;
+	color: #921515;
+}
+
+.box {
+	background-color: #db9999;
+	width: 80%;
+	border-radius: 25px;
+	padding: 12px 18px 12px 18px;
+	margin: auto;
+}
+
 @media screen and (max-width:680px) {
 	nav ul {
 		display: none;	
