@@ -1,0 +1,49 @@
+body {
+	background-color: #921515;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	font-family: georgia;
+}
+
+#container {
+	background-color: #FFFFFF;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 18px;
+	width: 65%;
+	min-height: 95%;
+}
+
+hr {
+	width: 95%;
+	height: 5px;
+	background-color: #000000;
+}
+
+header {
+	float: left;
+	width: 25%;
+	font-size: 30px;
+}
+
+nav {
+	float: left;
+	width: 75%;
+	font-size: 13px;
+}
+
+nav li {
+	display: inline-block;
+	margin-right: 7px;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #921515;
+}
