@@ -61,6 +61,15 @@ h3 {
 	margin: auto;
 }
 
+#refbox {
+	width: 80%;
+	margin: auto;
+	border: 2px solid black;
+	border-radius: 20px;
+	min-height: 150px;
+	padding: 10px;
+}
+
 @media screen and (max-width:680px) {
 	nav ul {
 		display: none;	

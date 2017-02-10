@@ -1,0 +1,123 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="description" content="Online Centre for Religious Studies">
+	<meta name="keywords" content="religious studies, religion, re">
+	<meta name="author" content="Luke Burns">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Online Centre for Religious Studies</title>
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+THE ONLINE CENTRE FOR RELIGIOUS STUDIES
+</header>
+
+<nav>
+<!--Standard Menu-->
+	<ul>
+		<li><a href="index.html">HOME</a></li>
+		<li><a href="contact.html">CONTACT US</a></li>
+		<li><a href="courses.html">ONLINE COURSES</a></li>
+		<li><a href="links.html">LINKS</a></li>
+		<li><a href="news.html">NEWS</a></li>
+		<li><a href="resources.html">FREE RESOURCES</a></li>
+		<li><a href="talks.html">OCRS: TALKS</a></li>
+	</ul>
+
+<!--Mobile Menu-->	
+	<div id="menu" style="font-size: 40px; display: none; float: right; cursor: pointer" onclick="show('dropmenu');">&#9776;</div>
+	
+	<select id="dropmenu" style="display: none; clear: right; float: right" onchange="location = this.value;">
+	<option>-select-</option>
+	<option value="index.html">HOME</option>
+	<option value="contact.html">CONTACT US</option>
+	<option value="courses.html">ONLINE COURSES</option>
+	<option value="links.html">LINKS</option>
+	<option value="news.html">NEWS</option>
+	<option value="resources.html">FREE RESOURCES</option>
+	<option value="talks.html">OCRS: TALKS</option>
+	</select>
+	
+</nav>
+
+<div style="clear: both;"></div>
+
+<br>
+<hr>
+<br>
+
+<!--Main Text Area-->
+<div id="text">
+<h2>OCRS Book Index</h2>
+Use the search tool below to find page numbers for any religious studies keyword you type in. This will only return page numbers at present - unfortunately we cannot include the actual texts.
+<br><br>
+<div id="refbox">
+<div id="search"><input type="text" id="s_in"><button type="button" onclick="search()">GO</button><button type="button" onclick="clear1()">CLEAR</button></div>
+<br>
+<div id="results">This is just a proof of concept using a JS switch statement - the end product will need to be a proper database built using mySQL or similar. Try searching for hajj, abbasids, badr, or gabriel (exact matches only for now).</div>
+</div>
+<br><br>
+</div>
+
+<br>
+<hr>
+<br>
+
+<footer>
+<a href="https://www.facebook.com/relstudies/">Facebook</a> | <a href="https://twitter.com/@rel_studies/">Twitter</a> | <a href="https://www.youtube.com/channel/UCQSlC6QOT-Z1019OVRWiUxQ/">Youtube</a>
+<br><br>
+&copy; OCRS 2016-7
+</footer>
+
+</div>
+
+</body>
+
+<script type="text/javascript">
+
+function show(id) {
+	document.getElementById(id).style.display = 'block';
+}
+
+function hide(id) {
+	document.getElementById(id).style.display = 'none';
+}
+
+function clear1() {
+	document.getElementById("s_in").value = "";
+	document.getElementById("results").innerHTML = "This is just a proof of concept using a JS switch statement - the end product will need to be a proper database built using mySQL or similar. Try searching for hajj, abbasids, badr, or gabriel (exact matches only for now).";
+}
+
+function search() {
+	i = document.getElementById("s_in").value;
+	
+	switch(i) {
+	case "abbasids":
+		document.getElementById("results").innerHTML = "Dynasty of rulers in Islamic empire, descended from Muhammad's uncle, in power 750-1258<br><br>Islam: A Very Short Introduction<br><strong>Malise Ruthven</strong><br>2012<br>Page(s): 19<br><br>Islam<br><strong>Alfred Guillaume</strong><br>1975<br>Page(s): 82-4,93,114,117,166";
+	break;
+	case "badr":
+		document.getElementById("results").innerHTML = "Important battle during formation of Islam, Muhammad's successful fight against the Meccan army.<br><br>Islam: A Very Short Introduction<br><strong>Malise Ruthven</strong><br>2012<br>Page(s): 44,45<br><br>Islam<br><strong>Alfred Guillaume</strong><br>1975<br>Page(s): 43,44,45";
+	break;
+	case "hajj":
+		document.getElementById("results").innerHTML = "Muslim pilgrammage to Mecca, one of the five pillars of Islam.<br><br>Islam: A Very Short Introduction<br><strong>Malise Ruthven</strong><br>2012<br>Page(s): 23,25,38";
+	break;
+	case "gabriel":
+		document.getElementById("results").innerHTML = "Angel who revealed Qur'an to Muhammad.<br><br>Islam: A Very Short Introduction<br><strong>Malise Ruthven</strong><br>2012<br>Page(s): 42<br><br>Islam<br><strong>Alfred Guillaume</strong><br>1975<br>Page(s): 34,108-9,189";
+	break;	
+	case "":
+		document.getElementById("results").innerHTML = "This is just a proof of concept using a JS switch statement - the end product will need to be a proper database built using mySQL or similar. Try searching for hajj, abbasids, badr, or gabriel (exact matches only for now).";
+	break;	
+	default:
+		document.getElementById("results").innerHTML = "I don\'t recognise that, sorry!";
+	}
+}
+
+</script>
+
+</html>
